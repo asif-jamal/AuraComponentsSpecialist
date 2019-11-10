@@ -1,0 +1,18 @@
+<!-- BoatSerach -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes"   >
+
+        <aura:handler name="formsubmit" event = "c:FormSubmit" action="{!c.onFormSubmit}" />
+
+        <lightning:card title="Find a Boat" class="slds-m-bottom_50px">
+            <p class="slds-p-horizontal--small">
+                <c:BoatSearchForm />
+            </p>
+        </lightning:card>
+        <lightning:card title="Matching Boats">
+                <p class="slds-p-horizontal--small">
+                    <!-- Matching Boats will goes here -->
+                    <c:BoatSearchResults aura:id="BSRcmp" />
+                </p>
+        </lightning:card>
+</aura:component>
